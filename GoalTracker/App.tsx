@@ -6,6 +6,7 @@ import { createNativeStackNavigator} from '@react-navigation/native-stack';
 import VictorsScreen from './screens/VictorsPage';
 import MainScreen from './screens/MainPage'
 import { SafeAreaView } from 'react-native-safe-area-context';
+import DavidsPage from './screens/DavidsPage';
 
 const RootStack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ export default function App() {
       <RootStack.Navigator initialRouteName="Main Page">
         <RootStack.Screen name='Victors Page' component={VictorsScreen}/>
         <RootStack.Screen name='Main Page' component={MainScreen}/>
+        <RootStack.Screen name='Davids Page' component={DavidsPage}/>
       </RootStack.Navigator>
     </NavigationContainer>
     // <SafeAreaView style={backgroundStyles.container}>

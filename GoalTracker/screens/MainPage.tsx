@@ -7,22 +7,31 @@ const MainPageNav = () =>{
     const navigation = useNavigation()
     return (
         <View style={styles.container}>
-            
-            <TouchableOpacity style={styles.button}
-                onPress={() => {
-                    //go to victors page
-                    navigation.navigate('Victors Page')
-                }}>
-                    <Text style={styles.sectionTitle}>Victor's Page1</Text>
-                </TouchableOpacity>
-            <TouchableOpacity style={styles.button}
-                onPress={() => {
-                    navigation.navigate('VictorsScreen')
-                }}>
-                <Text style={styles.sectionTitle}>Kyles's Page</Text>
-            </TouchableOpacity>
-
-            <Text style={styles.sectionTitle}>Kha's Page</Text>
+          <TouchableOpacity style={styles.button}
+              onPress={() => {
+                  //go to victors page
+                  navigation.navigate('Victors Page')
+              }}>
+                  <Text style={styles.sectionTitle}>Victor's Page</Text>
+              </TouchableOpacity>
+          <TouchableOpacity style={styles.button}
+              onPress={() => {
+                  navigation.navigate('Davids Page')
+              }}>
+              <Text style={styles.sectionTitle}>David's Page</Text>
+          </TouchableOpacity>
+          {/* <TouchableOpacity style={styles.button}
+              onPress={() => {
+                  navigation.navigate('Khas Page')
+              }}>
+              <Text style={styles.sectionTitle}>Kha's Page</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}
+              onPress={() => {
+                  navigation.navigate('Kyles Page')
+              }}>
+              <Text style={styles.sectionTitle}>Kyle's Page</Text>
+          </TouchableOpacity> */}
         </View>
     );
 }
