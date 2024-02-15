@@ -17,7 +17,6 @@ const MainPageNav = () =>{
                 </TouchableOpacity>
             <TouchableOpacity style={styles.button}
                 onPress={() => {
-                    //go to victors page
                     navigation.navigate('VictorsScreen')
                 }}>
                 <Text style={styles.sectionTitle}>Kyles's Page</Text>
