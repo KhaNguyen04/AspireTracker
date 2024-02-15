@@ -1,16 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/core';
 
 const VictorPageNav = () =>{
+    const navigation = useNavigation()
     return (
         <View style={styles.container}>
-            <Text>Main Page 1</Text>
             <TouchableOpacity
                 onPress={() => {
                     //go to main page
+                    navigation.navigate('Main Page')
                 }}>
-                </TouchableOpacity>
+                <Text>Main Page</Text>
+            </TouchableOpacity>
         </View>
     );
 }

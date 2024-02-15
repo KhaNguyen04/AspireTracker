@@ -11,13 +11,12 @@ const MainPageNav = () =>{
             <TouchableOpacity style={styles.button}
                 onPress={() => {
                     //go to victors page
-                    navigation.navigate('VictorsPage')
+                    navigation.navigate('Victors Page')
                 }}>
                     <Text style={styles.sectionTitle}>Victor's Page1</Text>
                 </TouchableOpacity>
             <TouchableOpacity style={styles.button}
                 onPress={() => {
-                    //go to victors page
                     navigation.navigate('VictorsScreen')
                 }}>
                 <Text style={styles.sectionTitle}>Kyles's Page</Text>
