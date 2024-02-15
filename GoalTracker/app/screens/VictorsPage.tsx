@@ -1,18 +1,11 @@
 import React from 'react';
+import { Link } from 'expo-router';
 import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import { useNavigation } from '@react-navigation/core';
 
 const VictorPageNav = () =>{
-    const navigation = useNavigation()
     return (
         <View style={styles.container}>
-            <TouchableOpacity
-                onPress={() => {
-                    //go to main page
-                    navigation.navigate('Main Page')
-                }}>
-                <Text>Main Page</Text>
-            </TouchableOpacity>
+            <Link href="/">Index</Link>
         </View>
     );
 }
