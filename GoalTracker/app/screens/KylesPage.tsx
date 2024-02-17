@@ -13,8 +13,9 @@ const KylesPage = () =>{
             */}
             <View style={styles.taskContainer}>
                 <Text style={styles.labelFont}>
-                    Daily
+                    DAILY
                 </Text>
+                <TaskReminder goalName='basketball'/>
             </View>
         </View>
     );
@@ -22,15 +23,19 @@ const KylesPage = () =>{
 
 const styles = StyleSheet.create({
     container: {
-        padding: 16,
+        paddingVertical: 16,
+        paddingHorizontal: 8,
         marginTop: 8,
     },
     taskContainer: {
-        marginHorizontal: 16,
+        flexDirection: 'column',
+        alignItems: 'center',
     },
     labelFont: {
         color: '#fff',
-        fontSize: 32,
+        fontSize: 20,
+        fontWeight: 'bold',
+        fontFamily: 'sans-serif',
     },
 });
 
