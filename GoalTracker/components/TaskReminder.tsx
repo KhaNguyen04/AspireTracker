@@ -10,7 +10,7 @@ const TaskReminder = (props: TaskProps) => {
   return (
     <View style={styles.taskWrapper}>
         <Text style={styles.taskLabel}>{props.goalName}</Text>
-        <Text style={styles.taskText}>{props.goalStatus}</Text>
+        {/* <Text style={styles.taskText}>{props.goalStatus}</Text> */}
     </View>
   )
 }

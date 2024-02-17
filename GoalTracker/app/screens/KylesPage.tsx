@@ -32,7 +32,7 @@ const TEST = [{
 const KylesPage = () =>{
     return (
         <View style={styles.container}>
-            <Link href="/" style={styles.labelFont}>Index</Link>
+            <Link href="/">Index</Link>
             {/* check if task list is empty
                 if yes then render a message, else render tasks
             */}
@@ -60,9 +60,9 @@ const styles = StyleSheet.create({
     },
     taskContainer: {
         flexDirection: 'column',
-        alignItems: 'center',
     },
     labelFont: {
+        alignSelf: 'center',
         color: '#fff',
         fontSize: 20,
         fontWeight: 'bold',
