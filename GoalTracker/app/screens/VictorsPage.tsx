@@ -6,6 +6,8 @@ const VictorPageNav = () =>{
     return (
         <View style={styles.container}>
             <Link href="/">Index</Link>
+            <Link href="screens/DavidsPage">Create Custom Goal</Link>
+
         </View>
     );
 }
