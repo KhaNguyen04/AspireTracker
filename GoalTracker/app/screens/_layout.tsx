@@ -2,15 +2,18 @@ import React from 'react';
 import { Stack, Tabs } from 'expo-router';
 import { View } from 'react-native';
 // just playing around with layouts
+
+import Colors from '../../constants/Colors';
+
 export default function Layout() {
   return (
     <Stack
       screenOptions={{
         contentStyle: {
-          backgroundColor: '#0e2132',
+          backgroundColor: Colors.light.background,
         },
         // hide heading label
-        // headerShown: false,
+        headerShown: false,
       }
       }>
     </Stack>
