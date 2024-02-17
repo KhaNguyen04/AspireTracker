@@ -30,7 +30,7 @@ const DavidsPage = () => {
     return (
         <View style={styles.container}>
           <View style={styles.backButton}>
-            <Link href="/" asChild>
+            <Link href="screens/VictorsPage" asChild>
               <Pressable>
                 <Text>Back</Text>
               </Pressable>
