@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'expo-router';
 import { StyleSheet, Text, View, Pressable, TextInput, Switch} from 'react-native';
+import Colors from '../../constants/Colors';
 
 const DavidsPage = () => {
 
   const [isDescriptionEnabled, setIsDescriptionEnabled] = useState(false);
   const [goal, setGoal] = useState("");
-  const [goalError, setGoalError] = useState(false);
   const [description, setDescription] = useState("");
 
 
@@ -47,10 +47,11 @@ const DavidsPage = () => {
                 value={goal}
                 onChangeText={(text) => setGoal(text)}
                 style={{
-                  backgroundColor: '#fff',
+                  backgroundColor: Colors.light.inputBackground,
                   borderWidth: 1,
                   minWidth: '80%',
                   padding: 10,
+                  borderRadius: 10,
                   borderColor: goal.length > 0 ? '#000' : 'red',
                 }}
               />
@@ -79,10 +80,8 @@ const DavidsPage = () => {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#efefef',
     },
     backButton: {
-      backgroundColor: '#fff',
       padding: 10,
     },
     addGoalContainer: {
@@ -102,10 +101,11 @@ const styles = StyleSheet.create({
       fontSize: 12,
     },
     input: {
-      backgroundColor: '#fff',
+      backgroundColor: Colors.light.inputBackground,
       borderWidth: 1,
       minWidth: '80%',
       padding: 10,
+      borderRadius: 10,
     },
     goalErrorMesage: {
       color: 'red',
