@@ -8,23 +8,28 @@ const TEST = [{
     data: [
       {
         id: "1",
-        task: "Buy groceries"
+        task: "Buy groceries",
+        desc: "buy groceries at 3:00"
       },
       {
         id: "2",
-        task: "Feed Cat"
+        task: "Feed Cat",
+        desc: "buy groceries at 3:00"
       },
       {
         id: "3",
-        task: "Sleep for 3 hours"
+        task: "Sleep for 3 hours",
+        desc: null
       },
       {
         id: "4",
-        task: "Water Plants"
+        task: "Water Plants",
+        desc: "plant water"
       },
       {
         id: "5",
-        task: "Drink Water"
+        task: "Drink Water",
+        desc: "nah"
       },
     ]
 }];
@@ -44,7 +49,7 @@ const KylesPage = () =>{
                         <Text style={styles.labelFont}>{section.title}</Text>
                     )}
                     renderItem={({item}) => (
-                        <TaskReminder goalName={item.task}/>
+                        <TaskReminder data={item}/>
                     )}
                 />
             </View>

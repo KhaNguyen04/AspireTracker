@@ -1,19 +1,66 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React, { useState } from 'react'
+import { 
+  StyleSheet, 
+  Text, 
+  TouchableHighlight, 
+  TouchableOpacity, 
+  View 
+} from 'react-native'
 
-interface TaskProps {
-    goalName: string;
-    goalStatus?: string;
-};
+// structure for test data
+type Task = {
+    data: {
+      id: string;
+      task: string;
+      desc: string;
+    };
+}
 
-const TaskReminder = (props: TaskProps) => {
+const TaskReminder = ({ data } : Task) => {
+  const [isExpanded, setExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setExpanded(!isExpanded)
+  };
+
   return (
-    <View style={styles.taskWrapper}>
-        <Text style={styles.taskLabel}>{props.goalName}</Text>
-        {/* <Text style={styles.taskText}>{props.goalStatus}</Text> */}
+    <View>
+      <TouchableHighlight
+        onPress={toggleExpand}
+        style={styles.taskWrapper}
+      >
+        <>
+          <Text style={styles.textWrapper}>
+            <Text style={styles.taskLabel}>
+              {data.task}
+            </Text>
+          </Text>
+          {isExpanded && data.desc != null && (
+            <Text style={styles.textWrapper}>
+            <Text style={styles.taskText}>
+              {data.desc}
+            </Text>
+          </Text>
+          )}
+        </>
+      </TouchableHighlight>
     </View>
   )
 }
+
+// interface TaskProps {
+//     goalName: string;
+//     goalStatus?: string;
+// };
+
+// const TaskReminder = (props: TaskProps) => {
+//   return (
+//     <View style={styles.taskWrapper}>
+//         <Text style={styles.taskLabel}>{props.goalName}</Text>
+//         {/* <Text style={styles.taskText}>{props.goalStatus}</Text> */}
+//     </View>
+//   )
+// }
 
 
 const styles = StyleSheet.create({
@@ -25,12 +72,18 @@ const styles = StyleSheet.create({
       marginTop: 8,
     },
     taskLabel: {
-      color: '#fff',
       fontSize: 18,
       fontWeight: 'bold',
     },
     taskText: {
-      color: '#fff',
+      fontSize: 13,
+    },
+    textWrapper: {
+      color: '#fff'
+    },
+    touchableItem: {
+      // borderRadius: 10,
+      overflow: 'hidden'
     },
 });
 export default TaskReminder
